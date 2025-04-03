@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Delights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #8b4513;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #8b4513;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #8b4513;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .menu-item {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        window.onload = function() {
+            showSection('home');
+        };
+    </script>
+</head>
+<body>
+    <header>
+        M4 Delights
+    </header>
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('menu')">Menu</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+    
+    <section id="home">
+        <h2>Welcome to M4 Delights</h2>
+        <p>Delicious treats delivered to your doorstep!</p>
+        <p><strong>About Us</strong></p>
+        <p>M4 Delights is a food and beverage business dedicated to bringing unique and delightful flavors to our customers. We specialize in coffee jelly and a variety of other food products, ensuring every bite and sip is a delightful experience.</p>
+    </section>
+    
+    <section id="menu" style="display: none;">
+        <h2>Our Menu</h2>
+        <div class="menu-item">Caramel Macchiato Coffee Jelly</div>
+        <div class="menu-item">Salted Caramel Coffee Jelly</div>
+        <div class="menu-item">Matcha Coffee Jelly</div>
+        <div class="menu-item">Classic Coffee Jelly</div>
+    </section>
+    
+    <section id="contact" style="display: none;">
+        <h2>Contact Us</h2>
+        <p>Email: m4delights@gmail.com</p>
+        <p>Phone: 09504145141</p>
+        <p>Follow us on social media: <a href="https://www.facebook.com/profile.php?id=61574791686744" target="_blank">Facebook</a></p>
+    </section>
+    
+    <footer>
+        &copy; 2025 M4 Delights. All Rights Reserved.
+    </footer>
+</body>
+</html>
